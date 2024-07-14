@@ -1,0 +1,7 @@
+figure[slot='audio'] {
+  a {
+    display: block;
+    margin: 0;
+    font-size: 1rem;
+  }
+}

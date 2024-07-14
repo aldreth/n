@@ -75,6 +75,8 @@ export default async function (eleventyConfig) {
 
   // --------------------- Shortcodes
   eleventyConfig.addShortcode('svg', shortcodes.svgShortcode);
+
+  eleventyConfig.addShortcode('audio', shortcodes.audioShortcode);
   eleventyConfig.addShortcode('image', shortcodes.imageShortcode);
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
 
