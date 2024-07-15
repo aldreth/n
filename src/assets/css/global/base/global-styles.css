@@ -135,3 +135,18 @@ a:hover {
     display: none;
   }
 }
+
+.cover-image {
+  --spot-color: transparent;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+
+  h2 {
+    margin-bottom: var(--space-m);
+  }
+  p:not(:first-of-type) {
+    margin-top: var(--space-xs-s);
+  }
+}

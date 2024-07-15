@@ -10,6 +10,7 @@
   },
   "scripts": {
     "clean": "rimraf dist src/_includes/css src/_includes/scripts",
+    "coverImages": "node ./src/_config/setup/generate-cover-images.js",
     "favicons": "node ./src/_config/setup/generate-favicons.js",
     "screenshots": "node ./src/_config/setup/generate-screenshots.js",
     "dev:clean": "rimraf src/assets/og-images",

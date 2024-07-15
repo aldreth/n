@@ -6,8 +6,8 @@
 
   <head>
     <!-- 1 charset/viewport -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- 2 title -->
     <title>
@@ -20,7 +20,7 @@
       {%- endif -%}
     </title>
 
-    <base href="{{ page.url }}" />
+    <base href="{{ page.url }}"/>
 
     <!-- 3 synchronous js  -->
     {% include "head/js-inline.njk" %}
@@ -31,6 +31,7 @@
     <!-- 5 CSS  -->
     <!-- <link rel="stylesheet" href="/assets/css/global.css?{{ assetHash }}" /> -->
     {% include "head/css-inline.njk" %}
+    {% include "head/cover-images.njk" %}
 
     <!-- 6 preloads  -->
     {% include "head/preloads.njk" %}
