@@ -29,32 +29,24 @@ const stringifyAttributes = attributeMap => {
  * @param {string[]} [formats=['avif', 'webp', 'jpeg']] - The formats for generating responsive images.
  * @returns {string} - The HTML image element.
  */
-export const audioShortcode = async (
-  src,
-  caption = '',
-  className = ''
-  
-) => {
+export const audioShortcode = async (src, caption = '', className = '') => {
+  const outputDir = './dist/assets/audio/';
+  const htmlOutputDir = '/assets/audio/';
 
-const outputDir= './dist/assets/audio/'
-const htmlOutputDir = '/assets/audio/'
+  // Getting the URL to use
+  // let imgSrc = src;
+  // if (!imgSrc.startsWith('.')) {
+  //     const inputPath = this.page.inputPath;
+  //     const pathParts = inputPath.split('/');
+  //     pathParts.pop();
+  //     imgSrc = `${pathParts.join('/')}/${src}`;
+  // }
+  const outputPath = outputDir + src;
+  const htmlOutputPath = htmlOutputDir + src;
 
-
-// Getting the URL to use
-// let imgSrc = src;
-// if (!imgSrc.startsWith('.')) {
-//     const inputPath = this.page.inputPath;
-//     const pathParts = inputPath.split('/');
-//     pathParts.pop();
-//     imgSrc = `${pathParts.join('/')}/${src}`;
-// }
-const outputPath = outputDir + src
-const htmlOutputPath = htmlOutputDir + src
-
-const inputPath = `src/assets/audio/${src}`
-//   await fs.mkdir(outputDir, { recursive: true }); 
-  await fs.copyFile(inputPath, outputPath)
-
+  const inputPath = `src/assets/audio/${src}`;
+  await fs.mkdir(outputDir, {recursive: true});
+  await fs.copyFile(inputPath, outputPath);
 
   const audioElement = caption
     ? `<figure slot="audio" class="flow ${className ? `${className}` : ''}">
