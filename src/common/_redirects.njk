@@ -4,6 +4,7 @@ eleventyExcludeFromCollections: true
 excludeFromSitemap: true
 ---
 
+/index.html /stories/index.html
 {% for page in collections.all %}
   {% if page.url and page.data.redirectFrom %}
     {% for oldUrl in page.data.redirectFrom %}
