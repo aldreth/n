@@ -1,0 +1,28 @@
+{
+  "name": "eleventy-audio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Generate resized, reformatted audio files at build time. Returns metadata and no HTML.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/audio.d.ts",
+      "import": "./lib/audio.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "typescript": "^5.9.0"
+  }
+}
